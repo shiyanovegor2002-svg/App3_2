@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vulnerable Keystore Test App"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Service 1 Buttons -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service 1: Insecure Data Storage (M9)"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnService1Encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Encrypt to World-Writable Storage" />
+
+    <Button
+        android:id="@+id/btnService1Export"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export Key Material" />
+
+    <!-- Service 2 Buttons -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service 2: Weak Password KeyChain (M1)"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnService2Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Stored Password" />
+
+    <Button
+        android:id="@+id/btnService2Export"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export Credentials" />
+
+    <!-- Service 3 Buttons -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service 3: Weak Auth Hardware Keystore (M1)"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnService3Generate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate RSA Key (No Auth)" />
+
+    <Button
+        android:id="@+id/btnService3Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Key Info" />
+
+    <!-- Status Display -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f0f0f0"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ready for testing..."
+            android:fontFamily="monospace"
+            android:textSize="12sp" />
+    </ScrollView>
+
+</LinearLayout>
